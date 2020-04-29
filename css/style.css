@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+.elem {
+    position: absolute;
+    padding: 50px;
+    border: 1px solid black;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+
+.first {
+    left: 100px;
+    top: 400px;
+}
+
+.second {
+    left: 400px;
+    top: 400px;
+}
