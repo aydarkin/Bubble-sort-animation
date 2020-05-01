@@ -1,22 +1,126 @@
-.wrapper {
-   display: flex;
-   position: relative;
+html {
+   background-color: #252423;
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 300;
 }
 
-.elem {
+body {
+   margin: 0;
+}
+
+.wrapper {
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+           flex-direction: column;
+   -webkit-box-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+           align-items: center;
+
+   margin: 0 auto;
+   height: 100vh;
+   min-height: 720px;
+   width: 896px;
+}
+
+.title {
+   font-size: 36px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.sort {
+   display: -webkit-box;
+   display: flex;
+   position: relative;
+   width: 100%;
+   height: 128px;
+   margin: 96px 0;
+}
+
+.sort__elem {
    position: absolute;
-   padding: 50px;
-   border: 1px solid black;
-   background-color: aliceblue;
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+           align-items: center;
+   width: 128px;
+   height: 128px;
+   font-size: 24px;
+   font-weight: 600;
+
+   color: black;
+   background-color: #FB89FB;
    border-radius: 50%;
 }
 
-.first {
-   left: 100px;
-   top: 400px;
+.status {
+   text-align: center;
+   margin: 24px 0;
 }
 
-.second {
-   left: 400px;
-   top: 400px;
+.status__par {
+   margin: 0;
+   line-height: 1.5em;
+   font-size: 18px;
+}
+
+.buttons {
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+           flex-direction: column;
+}
+
+.button {
+   width: 512px;
+   height: 64px;
+   margin: 16px 0;
+
+   font-size: 36px;
+   color: white;
+
+   background-color: transparent;
+   border: 4px solid #8453E3;
+   border-radius: 24px;
+   cursor: pointer;
+   -webkit-transition: .3s;
+   transition: .3s;
+}
+
+.button:hover {
+   background-color: #8453E3;
+}
+
+.button:active, .button:focus {
+   outline: none;
+}
+
+.button:disabled {
+   cursor: default;
+   color: gray;
+}
+
+.button:disabled.button:hover {
+   background-color: transparent;
+   color: gray;
+}
+
+@media screen and (max-width: 768px) {
+   .sort {
+      width: 728px;
+      height: 104px;
+   }
+
+   .sort__elem {
+      width: 104px;
+      height: 104px;
+   }
 }
